@@ -16,12 +16,16 @@ Authenticated users can access:
 - POST, PATCH, PUT, DELETE requests for animals currently at the shelter
 
 Scopes:
-- Filters animal by name, species, age, and random destinations
+- Filters animal by name, species, age, breed, and random destinations
 
 The application structure is outlined below.  
 
 Models:
-  - Animals
+  - Animal
+    - name - string
+    - species - string
+    - breed - string
+    - age - integer
 
 ## User Stories
 
@@ -34,7 +38,7 @@ Models:
   * Complete testing with request specs.
   * Randomized data with Faker or your own custom seed code.
   * A README that thoroughly documents all endpoints, including parameters that can be passed in.
-  
+
 ## Database Seeding
 
 <!-- The application is seeded using `faker`.  It seeds 50 destinations and variable number of reviews for each university.
