@@ -1,23 +1,19 @@
 module AnimalCompare
   def animal_compare(animal_base, new_animal)
-    status = []
-    if animal_base.name === new_animal.name
-      status.push true
+    update_array = []
+    if animal_base.name != new_animal.name
+      update_array.push 'updated'
     end
-    if animal_base.species === new_animal.species
-      status.push true
+    if animal_base.species != new_animal.species
+      update_array.push 'updated'
     end
-    if animal_base.breed === new_animal.breed
-      status.push true
+    if animal_base.breed != new_animal.breed
+      update_array.push 'updated'
     end
-    if animal_base.age === new_animal.age
-      status.push true
+    if animal_base.age != new_animal.age
+      update_array.push 'updated'
     end
 
-    if status.include? false
-      return false
-    else
-      return true
-    end
+    update_array.include? 'updated'
   end
 end

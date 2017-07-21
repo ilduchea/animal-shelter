@@ -28,15 +28,15 @@ class V1::AnimalsController < ApplicationController
 
   def update
     @animal = Animal.find(params[:id])
+    animal_base = Animal.find(params[:id])
     if @animal.update!(animal_params)
-      updated_animal = Animal.find(params[:id])
-      if animal_compare @animal, updated_animal
-        render status: 400, json: {
-          message: "#{@animal.name} was not updated."
+      if animal_compare animal_base, @animal
+        render status: 200, json: {
+          message: "#{animal_base.name} has successfully been updated."
         }
       else
-        render status: 200, json: {
-          message: "#{@animal.name} has successfully been updated."
+        render status: 400, json: {
+          message: "#{animal_base.name} was not updated."
         }
       end
     end
