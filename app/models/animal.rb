@@ -1,4 +1,6 @@
 class Animal < ApplicationRecord
+  include Filterable
+  
   validates :name, :species, :breed, :age, presence: true
 
   scope :name_search, -> (name){ where("lower(name) like ?", "%#{name}%".downcase) }
