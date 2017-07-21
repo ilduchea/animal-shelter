@@ -1,4 +1,5 @@
 require 'rails_helper'
+# require 'net/http'
 
 RSpec.describe Animal, type: :model do
   it { should validate_presence_of :name }
@@ -15,6 +16,15 @@ RSpec.describe Animal, type: :model do
       @animal1 = animals[0]
       @animal2 = animals[1]
     end
+
+    # describe "place headers in a get request" do
+    #   url = URI("http://localhost:3000/v1/animals")
+    #   http = Net::HTTP.new(url.host, url.port)
+    #   request = Net::HTTP::Get.new(url)
+    #   request["auth_token"] = 'qwerty'
+    #   response = http.request(request)
+    #   expect(JSON.parse(response.body).first['name']).to eq(@animal2.name)
+    # end
 
     describe "name_search" do
       it "returns all animals where search params equals the name" do
