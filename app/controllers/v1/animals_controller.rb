@@ -1,4 +1,6 @@
 class V1::AnimalsController < ApplicationController
+  include AnimalCompare
+
   def index
     @animals = Animal.all
     json_response(@animals)
@@ -27,9 +29,16 @@ class V1::AnimalsController < ApplicationController
   def update
     @animal = Animal.find(params[:id])
     if @animal.update!(animal_params)
-      render status: 200, json: {
-        message: "Your animal has successfully been updated."
-      }
+      updated_animal = Animal.find(params[:id])
+      if animal_compare @animal, updated_animal
+        render status: 400, json: {
+          message: "#{@animal.name} was not updated."
+        }
+      else
+        render status: 200, json: {
+          message: "#{@animal.name} has successfully been updated."
+        }
+      end
     end
   end
 
@@ -37,7 +46,7 @@ class V1::AnimalsController < ApplicationController
     @animal = Animal.find(params[:id])
     if @animal.destroy
       render status: 200, json: {
-        message: "Your animal has been deleted."
+        message: "#{@animal.name} has been deleted."
       }
     end
   end
