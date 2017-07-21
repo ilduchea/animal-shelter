@@ -28,25 +28,25 @@ RSpec.describe Animal, type: :model do
 
     describe "name_search" do
       it "returns all animals where search params equals the name" do
-        get "/v1/animals?name_search=#{@animal2.name}"
+        get "/v1/search?name_search=#{@animal2.name}"
         expect(JSON.parse(response.body).first['name']).to eq(@animal2.name)
       end
     end
     describe "species_search" do
       it "returns all animals where search params equals the species" do
-        get "/v1/animals?species_search=#{@animal2.species}"
+        get "/v1/search?species_search=#{@animal2.species}"
         expect(JSON.parse(response.body).first['species']).to eq(@animal2.species)
       end
     end
     describe "breed_search" do
       it "returns all animals where search params equals the breed" do
-        get "/v1/animals?breed_search=#{@animal2.breed}"
+        get "/v1/search?breed_search=#{@animal2.breed}"
         expect(JSON.parse(response.body).first['breed']).to eq(@animal2.breed)
       end
     end
     describe "age_search" do
       it "returns all animals where search params equals the age" do
-        get "/v1/animals?age_search=#{@animal2.age}"
+        get "/v1/search?age_search=#{@animal2.age}"
         expect(JSON.parse(response.body).first['age']).to eq(@animal2.age)
       end
     end

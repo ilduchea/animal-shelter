@@ -1,7 +1,17 @@
 class V1::AnimalsController < ApplicationController
   def index
-    @animals = Animal.filter(params.slice(:name_search, :species_search, :breed_search, :age_search, :random))
+    @animals = Animal.all
     json_response(@animals)
+  end
+
+  def search
+    @animals = Animal.filter(params.slice(:name_search, :species_search, :breed_search, :age_search))
+    json_response(@animals)
+  end
+
+  def random
+    @animal = Animal.order("RANDOM()").limit(1)
+    json_response(@animal)
   end
 
   def show
