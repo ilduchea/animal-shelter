@@ -1,22 +1,15 @@
 # Animal Shelter, v1
 
-#### This is a API Application built using Ruby on Rails.  July 21, 2017
+#### This is an API with full CRUD, built using Ruby on Rails.  July 21, 2017
 
 #### By _**Tyler Stephenson**_
 
 ## Description
 
-This is an API that includes data for an animal shelter. It includes multiple scopes listed below for querying.
-
-
-Users can access:
-- GET requests for animals currently at the shelter.
-
-Authenticated users can access:
-- POST, PATCH, PUT, DELETE requests for animals currently at the shelter
+This is an API that includes data and full CRUD functionality for an animal shelter. It includes multiple scopes listed below for querying.
 
 Scopes:
-- Filters animal by name, species, age, breed, and random animals
+- Filters animal by name, species, age, and breed.
 
 The application structure is outlined below.  
 
@@ -63,17 +56,6 @@ In your terminal:
 * `rails db:setup`
 * `rails db:test:prepare`
 
-<!-- This application uses JWT Tokens.  To configure, you must authenticate the seeded user to generate a token.  In your terminal, run:
-
-`curl -X POST -d email="qwerty@email.com" -d password="password" http://localhost:3000/v1/auth_user`
-
-You will need the auth_token from curl to run queries via Postman.
-
-
-* URL: localhost:3000/v1/
-* Header Key: Authorization
-* Header Value: 'your-own-token-goes-here' -->
-
 ## Development server
 
 Run `rails s` for a dev server. It will be servered on `http://localhost:3000/`, by default.
@@ -96,7 +78,9 @@ Run `rspec` in terminal to test.
 - Random - GET `http://localhost:3000/random`
   - Returns a random animal.
 - Search - GET `http://localhost:3000/search?{params}`
-  - Returns all animals with the given search options. See below.
+  - Returns all animals with the given search options.
+  - Params can be any combination of `name_search={name}&species_search={species}&breed_search={breed}&age_search={age}`
+  - See below for examples.
 - Index(all) - GET `http://localhost:3000/animals`
   - Returns all animals.
 - Create - POST `http://localhost:3000/animals?name={name}&species={species}&breed={breed}&age={age}`
@@ -105,6 +89,7 @@ Run `rspec` in terminal to test.
   - Returns an animal by its id.
 - Update - PATCH or PUT `http://localhost:3000/animals/{id}?{params}`
   - Updates a given animal with the given attributes.
+  - Params can be any combination of `name={name}&species={species}&breed={breed}&age={age}`
 - Destroy - DELETE `http://localhost:3000/animals/{id}`
   -Removes the given animal from the data base.
 
@@ -126,10 +111,6 @@ See table below for possible searches and an example of performing in Postman/CU
 
 Postman:
 
-<!-- in the Headers section the key-value pair is:
-Authorization, your-own-token-from-curl-goes-here -->
-
-
 1)  Get all animals.
   * select GET and type in :
   ```
@@ -147,6 +128,12 @@ Authorization, your-own-token-from-curl-goes-here -->
   ```
   http://localhost:3000/v1/animals?species_search=dog&age_search=5
   ```
+## Known Bugs
+No known bugs at this time.
+
+## Support and Contact details
+* Tyler Stephenson
+* ilduchea@gmail.com
 
 ## Technologies Used
 
