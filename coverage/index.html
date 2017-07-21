@@ -14,27 +14,27 @@
       <img src="./assets/0.10.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-21T09:42:08-07:00">2017-07-21T09:42:08-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-21T10:01:06-07:00">2017-07-21T10:01:06-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">100.0%</span></span>
+    (<span class="covered_percent"><span class="green">92.14%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.06
+         1.36
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>23</b> files in total.
-    <b>84</b> relevant lines. 
-    <span class="green"><b>84</b> lines covered</span> and
-    <span class="red"><b>0</b> lines missed </span>
+    <b>25</b> files in total.
+    <b>140</b> relevant lines. 
+    <span class="green"><b>129</b> lines covered</span> and
+    <span class="red"><b>11</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -73,21 +73,31 @@
       <tr>
         <td class="strong"><a href="#e7fcf0e22f3a516b5b84d9c2adbdc43b2efca3b0" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
+        <td>3</td>
         <td>2</td>
-        <td>1</td>
-        <td>1</td>
+        <td>2</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
       
       <tr>
-        <td class="strong"><a href="#f94e3ec841f13fbf4ef7416daab3d558b7763616" class="src_link" title="app/controllers/v1/animals_controller.rb">app/controllers/v1/animals_controller.rb</a></td>
+        <td class="strong"><a href="#6aafe374dcdb88391d71785220e4bc90b54738d7" class="src_link" title="app/controllers/concerns/response.rb">app/controllers/concerns/response.rb</a></td>
         <td class="green strong">100.0 %</td>
+        <td>5</td>
         <td>3</td>
-        <td>1</td>
-        <td>1</td>
+        <td>3</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>2.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#f94e3ec841f13fbf4ef7416daab3d558b7763616" class="src_link" title="app/controllers/v1/animals_controller.rb">app/controllers/v1/animals_controller.rb</a></td>
+        <td class="red strong">47.62 %</td>
+        <td>39</td>
+        <td>21</td>
+        <td>10</td>
+        <td>11</td>
+        <td>0.8</td>
       </tr>
       
       <tr>
@@ -113,11 +123,11 @@
       <tr>
         <td class="strong"><a href="#726671bdf61ab5c591cbdd335753f74f999ee557" class="src_link" title="app/models/animal.rb">app/models/animal.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>8</td>
-        <td>6</td>
-        <td>6</td>
+        <td>10</td>
+        <td>7</td>
+        <td>7</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>1.6</td>
       </tr>
       
       <tr>
@@ -128,6 +138,16 @@
         <td>2</td>
         <td>0</td>
         <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#ac706c894522ecd7aabbcca4874dc5301d53a03d" class="src_link" title="app/models/concerns/filterable.rb">app/models/concerns/filterable.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>13</td>
+        <td>8</td>
+        <td>8</td>
+        <td>0</td>
+        <td>2.5</td>
       </tr>
       
       <tr>
@@ -263,11 +283,11 @@
       <tr>
         <td class="strong"><a href="#a432967f7836ef0c80bf3eb5ce3308e38cdf5ec8" class="src_link" title="spec/models/animal_spec.rb">spec/models/animal_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>8</td>
-        <td>6</td>
-        <td>6</td>
+        <td>44</td>
+        <td>29</td>
+        <td>29</td>
         <td>0</td>
-        <td>1.7</td>
+        <td>2.2</td>
       </tr>
       
       <tr>
@@ -387,8 +407,8 @@
     <h3>app/controllers/application_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
+      <b>2</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -402,7 +422,62 @@
           <code class="ruby">class ApplicationController &lt; ActionController::API</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="2">
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  include Response</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="6aafe374dcdb88391d71785220e4bc90b54738d7">
+  <div class="header">
+    <h3>app/controllers/concerns/response.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">module Response</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def json_response(object, status = :ok)</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="3">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    render json: object, status: status</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby">end</code>
@@ -416,11 +491,11 @@
         <div class="source_table" id="f94e3ec841f13fbf4ef7416daab3d558b7763616">
   <div class="header">
     <h3>app/controllers/v1/animals_controller.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="red">47.62 %</span> covered</h4>
     <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>21</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
+      <span class="red"><b>11</b> lines missed.</span>
     </div>
   </div>
   
@@ -433,13 +508,229 @@
           <code class="ruby">class V1::AnimalsController &lt; ApplicationController</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="2">
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def index</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="3">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    @animals = Animal.filter(params.slice(:name_search, :species_search, :breed_search, :age_search, :random))</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="4">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    json_response(@animals)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="3">
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def show</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="8">
+          
+          
+          <code class="ruby">    @animal = Animal.find(params[:id])</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="9">
+          
+          
+          <code class="ruby">    json_response(@animal)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def create</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="13">
+          
+          
+          <code class="ruby">    @animal = Animal.create!(animal_params)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="14">
+          
+          
+          <code class="ruby">    json_response(@animal, :created)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def update</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="18">
+          
+          
+          <code class="ruby">    @animal = Animal.find(params[:id])</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="19">
+          
+          
+          <code class="ruby">    if @animal.update!(animal_params)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="20">
+          
+          
+          <code class="ruby">      render status: 200, json: {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">        message: &quot;Your animal has successfully been updated.&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">      }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def destroy</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="27">
+          
+          
+          <code class="ruby">    @animal = Animal.find(params[:id])</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="28">
+          
+          
+          <code class="ruby">    if @animal.destroy</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="29">
+          
+          
+          <code class="ruby">      render status: 200, json: {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">        message: &quot;Your animal has been deleted.&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">      }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="35">
+          <span class="hits">1</span>
+          
+          <code class="ruby">private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="36">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def animal_params</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="37">
+          
+          
+          <code class="ruby">    params.permit(:name, :species, :breed, :age)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
           
           
           <code class="ruby">end</code>
@@ -529,8 +820,8 @@
     <h3>app/models/animal.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>6</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>7</b> relevant lines. 
+      <span class="green"><b>7</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -547,40 +838,52 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  validates :name, :species, :breed, :age, presence: true</code>
+          <code class="ruby">  include Filterable</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  </code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
+          <code class="ruby">  validates :name, :species, :breed, :age, presence: true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="6">
+          <span class="hits">2</span>
+          
           <code class="ruby">  scope :name_search, -&gt; (name){ where(&quot;lower(name) like ?&quot;, &quot;%#{name}%&quot;.downcase) }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="7">
+          <span class="hits">2</span>
           
           <code class="ruby">  scope :species_search, -&gt; (species){ where(&quot;lower(species) like ?&quot;, &quot;%#{species}%&quot;.downcase) }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="8">
+          <span class="hits">2</span>
           
           <code class="ruby">  scope :breed_search, -&gt; (breed){ where(&quot;lower(breed) like ?&quot;, &quot;%#{breed}%&quot;.downcase) }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
           
           <code class="ruby">  scope :age_search, -&gt; (age){ where(age: age) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">end</code>
@@ -618,6 +921,103 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="ac706c894522ecd7aabbcca4874dc5301d53a03d">
+  <div class="header">
+    <h3>app/models/concerns/filterable.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">module Filterable</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  extend ActiveSupport::Concern</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  module ClassMethods</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def filter(filtering_params)</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="6">
+          <span class="hits">4</span>
+          
+          <code class="ruby">      results = self.where(nil)</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="7">
+          <span class="hits">4</span>
+          
+          <code class="ruby">      filtering_params.each do |key, value|</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="8">
+          <span class="hits">4</span>
+          
+          <code class="ruby">        results = results.public_send(key, value) if value.present?</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="10">
+          <span class="hits">4</span>
+          
+          <code class="ruby">      results</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">end</code>
@@ -1888,8 +2288,8 @@
     <h3>spec/models/animal_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>6</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>29</b> relevant lines. 
+      <span class="green"><b>29</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1940,6 +2340,222 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;scopes&quot;, type: :request do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    before do</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="11">
+          <span class="hits">4</span>
+          
+          <code class="ruby">      5.times do</code>
+        </li>
+      
+        <li class="covered" data-hits="20" data-linenumber="12">
+          <span class="hits">20</span>
+          
+          <code class="ruby">        FactoryGirl.create(:animal)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="14">
+          <span class="hits">4</span>
+          
+          <code class="ruby">      animals = Animal.all</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="15">
+          <span class="hits">4</span>
+          
+          <code class="ruby">      @animal1 = animals[0]</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="16">
+          <span class="hits">4</span>
+          
+          <code class="ruby">      @animal2 = animals[1]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    describe &quot;name_search&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &quot;returns all animals where search params equals the name&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        get &quot;/v1/animals?name_search=#{@animal2.name}&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(JSON.parse(response.body).first[&#39;name&#39;]).to eq(@animal2.name)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    describe &quot;species_search&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &quot;returns all animals where search params equals the species&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        get &quot;/v1/animals?species_search=#{@animal2.species}&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(JSON.parse(response.body).first[&#39;species&#39;]).to eq(@animal2.species)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    describe &quot;breed_search&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &quot;returns all animals where search params equals the breed&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="33">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        get &quot;/v1/animals?breed_search=#{@animal2.breed}&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(JSON.parse(response.body).first[&#39;breed&#39;]).to eq(@animal2.breed)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="37">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    describe &quot;age_search&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="38">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &quot;returns all animals where search params equals the age&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="39">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        get &quot;/v1/animals?age_search=#{@animal2.age}&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="40">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(JSON.parse(response.body).first[&#39;age&#39;]).to eq(@animal2.age)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
           
           
           <code class="ruby">end</code>
