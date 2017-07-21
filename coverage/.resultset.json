@@ -267,6 +267,11 @@
         1,
         null
       ],
+      "/home/ilduchea/Epicodus/animal-shelter/app/controllers/v1/animals_controller.rb": [
+        1,
+        null,
+        null
+      ],
       "/home/ilduchea/Epicodus/animal-shelter/app/jobs/application_job.rb": [
         1,
         null
@@ -281,7 +286,10 @@
         1,
         1,
         null,
-        null,
+        1,
+        1,
+        1,
+        1,
         null
       ],
       "/home/ilduchea/Epicodus/animal-shelter/app/models/application_record.rb": [
@@ -302,9 +310,16 @@
       "/home/ilduchea/Epicodus/animal-shelter/config/routes.rb": [
         1,
         null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
         null
       ]
     },
-    "timestamp": 1500653358
+    "timestamp": 1500655328
   }
 }
