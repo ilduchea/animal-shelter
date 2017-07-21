@@ -16,6 +16,16 @@ class V1::AnimalsController < ApplicationController
     json_response(@animal)
   end
 
+  def young
+    @animals = Animal.where("age < 5")
+    json_response(@animals)
+  end
+
+  def mature
+    @animals = Animal.where("age >= 5")
+    json_response(@animals)
+  end
+
   def show
     @animal = Animal.find(params[:id])
     json_response(@animal)

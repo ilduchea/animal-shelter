@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   concern :api_base do
     get 'random' => 'animals#random'
     get 'search' => 'animals#search'
+    get 'young' => 'animals#young'
+    get 'mature' => 'animals#mature'
     resources :animals
   end
 

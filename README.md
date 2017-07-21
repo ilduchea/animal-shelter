@@ -89,13 +89,24 @@ Run `rspec` in terminal to test.
 
 ## API Routes
 
+- Young - GET `http://localhost:3000/young`
+  - Returns all animals under 5 years old.
+- Mature - GET `http://localhost:3000/mature`
+  - Returns all animals that are 5 years old or older.
 - Random - GET `http://localhost:3000/random`
+  - Returns a random animal.
 - Search - GET `http://localhost:3000/search?{params}`
+  - Returns all animals with the given search options. See below.
 - Index(all) - GET `http://localhost:3000/animals`
-- Create - POST `http://localhost:3000/animals`
+  - Returns all animals.
+- Create - POST `http://localhost:3000/animals?name={name}&species={species}&breed={breed}&age={age}`
+  - Creates a new animal with the given attributes.
 - Show - GET `http://localhost:3000/animals/{id}`
+  - Returns an animal by its id.
 - Update - PATCH or PUT `http://localhost:3000/animals/{id}?{params}`
+  - Updates a given animal with the given attributes.
 - Destroy - DELETE `http://localhost:3000/animals/{id}`
+  -Removes the given animal from the data base.
 
 ## Performing Searches
 
