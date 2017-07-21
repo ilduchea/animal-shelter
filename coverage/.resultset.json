@@ -325,7 +325,7 @@
       "/home/ilduchea/Epicodus/animal-shelter/app/controllers/concerns/response.rb": [
         1,
         1,
-        19,
+        21,
         null,
         null
       ],
@@ -370,13 +370,13 @@
         null,
         null,
         1,
-        0,
-        0,
+        1,
+        1,
         null,
         null,
         1,
-        0,
-        0,
+        1,
+        1,
         null,
         null,
         1,
@@ -470,11 +470,25 @@
         1,
         1,
         null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/home/ilduchea/Epicodus/animal-shelter/config/routes.rb": [
         1,
         null,
+        1,
+        1,
         1,
         1,
         1,
@@ -538,6 +552,24 @@
         null,
         null
       ],
+      "/home/ilduchea/Epicodus/animal-shelter/spec/requests/get_mature_animals_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
       "/home/ilduchea/Epicodus/animal-shelter/spec/requests/get_random_animal_spec.rb": [
         1,
         null,
@@ -550,6 +582,24 @@
         1,
         1,
         1,
+        null,
+        null,
+        null
+      ],
+      "/home/ilduchea/Epicodus/animal-shelter/spec/requests/get_young_animals_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
         null,
         null,
         null
@@ -647,6 +697,6 @@
         null
       ]
     },
-    "timestamp": 1500678002
+    "timestamp": 1500679296
   }
 }
