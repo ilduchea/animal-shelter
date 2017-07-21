@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Animal.destroy_all
+
+42.times do |i|
+  Animal.create(
+    name: Faker::HitchhikersGuideToTheGalaxy.character,
+    species: Faker::HitchhikersGuideToTheGalaxy.specie,
+    breed: Faker::Cat.breed,
+    age: Faker::Number.between(1, 20)
+  )
+end
+
+p "Created #{Animal.count} animals"
