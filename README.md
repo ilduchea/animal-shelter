@@ -89,10 +89,13 @@ Run `rspec` in terminal to test.
 
 ## API Routes
 
-- Random - `http://localhost:3000/random`
-- Search - `http://localhost:3000/search?{params}`
-- Index(all) -  `http://localhost:3000/animals`
-- Index(all) -  `http://localhost:3000/animals`
+- Random - GET `http://localhost:3000/random`
+- Search - GET `http://localhost:3000/search?{params}`
+- Index(all) - GET `http://localhost:3000/animals`
+- Create - POST `http://localhost:3000/animals`
+- Show - GET `http://localhost:3000/animals/{id}`
+- Update - PATCH or PUT `http://localhost:3000/animals/{id}?{params}`
+- Destroy - DELETE `http://localhost:3000/animals/{id}`
 
 ## Performing Searches
 
