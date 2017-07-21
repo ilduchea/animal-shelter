@@ -1,4 +1,4 @@
-# Travel API, v1
+# Animal Shelter, v1
 
 #### This is a API Application built using Ruby on Rails.  July 21, 2017
 
@@ -16,7 +16,7 @@ Authenticated users can access:
 - POST, PATCH, PUT, DELETE requests for animals currently at the shelter
 
 Scopes:
-- Filters animal by name, species, age, breed, and random destinations
+- Filters animal by name, species, age, breed, and random animals
 
 The application structure is outlined below.  
 
@@ -41,12 +41,7 @@ Models:
 
 ## Database Seeding
 
-<!-- The application is seeded using `faker`.  It seeds 50 destinations and variable number of reviews for each university.
-
-There are 15 random users in the database and one specified:
-name: 'Qwerty',
-email: "qwerty@email.com",
-password: 'password' -->
+The application is seeded using `faker`.  It seeds 42 animals.
 
 ## Prerequisites
 
@@ -60,15 +55,15 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 In your terminal:
-* `git clone `
-* `cd `
+* `git clone animal-shelter`
+* `cd animal-shelter`
 * `bundle install`
 * Open another terminal window and type `postgres`.  Leave this window open.
 * In your first terminal window type:
 * `rails db:setup`
 * `rails db:test:prepare`
 
-This application uses JWT Tokens.  To configure, you must authenticate the seeded user to generate a token.  In your terminal, run:
+<!-- This application uses JWT Tokens.  To configure, you must authenticate the seeded user to generate a token.  In your terminal, run:
 
 `curl -X POST -d email="qwerty@email.com" -d password="password" http://localhost:3000/v1/auth_user`
 
@@ -77,7 +72,7 @@ You will need the auth_token from curl to run queries via Postman.
 
 * URL: localhost:3000/v1/
 * Header Key: Authorization
-* Header Value: 'your-own-token-goes-here'
+* Header Value: 'your-own-token-goes-here' -->
 
 ## Development server
 
@@ -92,73 +87,52 @@ Run `rails s` for a dev server. It will be servered on `http://localhost:3000/`,
 This app uses RSpec and Shouldamatchers for testing.
 Run `rspec` in terminal to test.
 
+## API Routes
+
+- Random - `http://localhost:3000/random`
+- Search - `http://localhost:3000/search?{params}`
+- Index(all) -  `http://localhost:3000/animals`
+- Index(all) -  `http://localhost:3000/animals`
 
 ## Performing Searches
 
 See table below for possible searches and an example of performing in Postman/CURL.
 
-#### Destination Searches
+#### Animal Searches
 
-<!-- | Parameter | Sample Value | Description |
+| Parameter | Sample Value | Description |
 |:----------:|:------------:|:------------|
-| name_scope |  Disneyland | The destination's name; searches for similar match without case sensitivity. |
-| city_scope |    Portland   |  The city of a destination; returns all destinations of similar city name, regardless of case input.  |
-| locale_scope | OR |    Returns state or province of the destination provided. |
-| country_scope | USA |    Returns country of the destination provided. |
-| mostReviews | 3 | Depending on integer input, will return destinations with most reviews; in this case, will return 3 destinations |
-| random | 5 | Depending on integer input, will return a number of random destinations; in this case, will return 5 random destinations | -->
-
-#### Example Destination Searches
-
-<!-- Postman:
-
-in the Headers section the key-value pair is:
-Authorization, your-own-token-from-curl-goes-here
+| name_search |  Tiny | All animals with that name; searches for similar match without case sensitivity. |
+| species_search |  dog | All animals of that species; searches for similar match without case sensitivity. |
+| breed_search |  pitbull | All animals of that breed; searches for similar match without case sensitivity. |
+| age_search |  5 | All animals with the age of 5. |
 
 
-1)  Get all destinations.
-* select GET and type in :
-```
-http://localhost:3000/v1/destinations?api_key=your_api_key
-```
+#### Example Animal Searches
 
-2) Get all destinations with word "Enchanted" in destination name.
-* select GET and type in :
-```
-http://localhost:3000/v1/destinations?name_scope=Enchanted&api_key=your_api_key
-```
+Postman:
 
-3) Get the destination with word "Enchanted" and the most reviewed destination in one query:
-```
-http://localhost:3000/v1/destinations?name_scope=Enchanted&mostReviews=1&api_key=your_api_key
-```
+<!-- in the Headers section the key-value pair is:
+Authorization, your-own-token-from-curl-goes-here -->
 
-4) Get second page of all destinations
-* select GET and type in:
-```
-http://localhost:3000/v1/destinations?page=2&api_key=your_api_key
-``` -->
 
-#### Reviews Searches
+1)  Get all animals.
+  * select GET and type in :
+  ```
+  http://localhost:3000/v1/animals
+  ```
 
-<!-- | Parameter | Sample Value | Description |
-|:---------:|:------------:|:------------|
-| heading_scope | Amazing | Returns all the reviews that contain the word 'Amazing' in the heading |
-| content_scope | Paris   | Returns all the reviews that contain the word 'Paris' within the body of the review |
-| rating_scope | 2 | Returns all the reviews matching the rating value provided; in this case, will return all reviews rating the destination a 2. |
- -->
+2) Get all animals with word "Tiny" in animal name.
+  * select GET and type in :
+  ```
+  http://localhost:3000/v1/animals?name_search=tiny
+  ```
 
-#### Example Reviews Searches
-
-<!-- 1) Get all reviews for a destination, in this case, destination id is 51.
-```
-http://localhost:3000/v1/destinations/51/reviews?api_key=your_api_key
-```
-
-2) Get all reviews for a destination, in this case, destination id is 51, where the rating is 5.
-```
-http://localhost:3000/v1/destinations/51/reviews?rating_scope=5&api_key=your_api_key
-``` -->
+3) Get all animals with the species of dog and the age of 5.
+  * select GET and type in :
+  ```
+  http://localhost:3000/v1/animals?species_search=dog&age_search=5
+  ```
 
 ## Technologies Used
 
